@@ -1,4 +1,4 @@
-[![Build Status](https://jenkins.marcusklein.tech/buildStatus/icon?job=react-pdfjs-example/master)](https://jenkins.marcusklein.tech/job/react-pdfjs-example/master)
+[![Build Status](https://jenkins.marcusklein.tech/buildStatus/icon?job=react-pdfjs-example/master)](https://jenkins.marcusklein.tech/blue/organizations/jenkins/react-pdfjs-example/activity)
 
 ## Description
 
