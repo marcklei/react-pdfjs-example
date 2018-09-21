@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import pdfjsLib from 'pdfjs-dist/build/pdf';
-import PdfRenderer from './PdfRenderer';
+import PdfDefaultRenderer from './PdfDefaultRenderer';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.min.js';
 
@@ -88,26 +88,12 @@ export default class PdfViewer extends PureComponent {
           </ul>
         </div>
 
-        <div className="pdf-renderer-container">
-          <div className="pdf-renderer-controls">
-            <div>
-              <button onClick={this.prevPage}>Previous</button>
-              <button onClick={this.nextPage}>Next</button>
-            </div>
-
-            <div>
-              Page: {currentPage} / {currentDocPages}
-            </div>
-          </div>
+        <div className="pdf-renderer-container" id="pdf-renderer-container">
           {!documentProxys && (
             <div>{`Loading ${files.length} Pdf-Documents`}</div>
           )}
           {documentProxys !== null && (
-            <PdfRenderer
-              page={currentPage}
-              pdfDoc={documentProxys[currentDocIndex]}
-              setCurrentPages={this.setCurrentPages}
-            />
+            <PdfDefaultRenderer pdfDoc={documentProxys[currentDocIndex]} />
           )}
         </div>
       </div>
